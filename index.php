@@ -10,9 +10,7 @@ if (($file = fopen('TestFile.csv', 'r')) !== false) {
 
         $data = $conn->prepare($find);
         $data->execute();
-
         $count = $data->rowCount();
-        echo $count . " ";
 
         if (!$count) {
             $insert_query = "INSERT INTO `mittora_test`( `chapter`, `goods`, `count`) VALUES ('$fileData[0]','$fileData[1]','$fileData[2]')";
